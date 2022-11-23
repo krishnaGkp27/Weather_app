@@ -104,7 +104,7 @@ body {
 }
 #five-day-forecast .five-day-forecast-container{
     display : grid;
-    grid-auto-flow: row;
+    
 }
 
 #five-day-forecast .five-day-forecast-container .min-temp,
