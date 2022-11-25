@@ -36,6 +36,7 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
+        "search search"
         "current current"
         "hourly hourly"
         "fiveday fiveday"
@@ -47,6 +48,13 @@ body {
 .container>article {
     border: 1px solid;
     border-radius: var(--spacing-regular);
+    padding: var(--spacing-regular);
+}
+
+#search{
+    grid-area: search;
+    font-size: var(--font-large);
+    border-radius: var(--font-regular);
     padding: var(--spacing-regular);
 }
 
