@@ -19,7 +19,7 @@ const getHourlyForecastData = async () => {
     return response.json();
 }
 
-const formatTemperature  = (temp) => `${temp?.toFixed(1)}°C`;
+const formatTemperature  = (temp) => `${temp?.toFixed(1)}°`;
 const createIconUrl = (icon) => `https://openweathermap.org/img/wn/${icon}@2x.png`
 
 const loadCurrentForecast = ({ name, main: { temp, temp_max, temp_min }, weather: [{ description }] }) => {
