@@ -5,7 +5,7 @@ let selectedCityText;
 let selectedCity;
 
 const getCitiesUsingGeoLocation = async (searchText) =>{
-    const response = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${searchText}&limit=5&appid=${API_KEY}`);
+    const response = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${searchText}&limit=5&appid=${API_KEY}`);
     return response.json();
 }
 const getCurrentWeatherData = async ({ lat, lon, name :city }) => {
@@ -20,7 +20,7 @@ const getHourlyForecastData = async () => {
 }
 
 const formatTemperature  = (temp) => `${temp?.toFixed(1)}°`;
-const createIconUrl = (icon) => `http://openweathermap.org/img/wn/${icon}@2x.png`
+const createIconUrl = (icon) => `https://openweathermap.org/img/wn/${icon}@2x.png`
 
 const loadCurrentForecast = ({ name, main: { temp, temp_max, temp_min }, weather: [{ description }] }) => {
 
