@@ -24,7 +24,6 @@ const createIconUrl = (icon) => `http://openweathermap.org/img/wn/${icon}@2x.png
 
 const loadCurrentForecast = ({ name, main: { temp, temp_max, temp_min }, weather: [{ description }] }) => {
 
-
     //console.log(weather);   
     const currentForecastElement = document.querySelector("#current-forecast");
     currentForecastElement.querySelector(".city").textContent = name;
@@ -177,11 +176,17 @@ const handleCitySelection = (event) => {
     }
     loadData();
 }
+// const closePopUp = function(){
+//     document.querySelector("#popUpContainer").innerHTML = "";
+//     document.querySelector(".container").style.opacity = "100%";
+// }
 // const load
 const contentLoaded = async () => {
     const searchInput = document.querySelector("#search");
     searchInput.addEventListener("input", debounceSearch);
     searchInput.addEventListener("change", handleCitySelection);
+   // const popUpClose = document.querySelector("#tclose")
+    //popUpClose.addEventListener("click",closePopUp);
 
 }
 document.addEventListener("DOMContentLoaded", contentLoaded);
